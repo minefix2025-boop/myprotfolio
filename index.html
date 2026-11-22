@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pumpk1nST | Portfolio</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ background:#090812;color:#fff;
+ font-family:'Space Grotesk',sans-serif;
+ overflow-x:hidden;
+}
+body:before{
+ content:"";position:fixed;inset:0;z-index:-1;
+ background:
+ radial-gradient(circle at 15% 15%,#542a8b55,transparent 35%),
+ radial-gradient(circle at 85% 60%,#a34c2850,transparent 35%);
+}
+nav{
+ display:flex;justify-content:space-between;align-items:center;
+ padding:25px 8%;border-bottom:1px solid #ffffff15;
+ position:sticky;top:0;background:#090812cc;
+ backdrop-filter:blur(15px);z-index:10;
+}
+.logo{font-size:23px;font-weight:bold}
+.logo span{color:#ff9b54}
+.links{display:flex;gap:30px}
+a{color:#aaa;text-decoration:none;transition:.3s}
+a:hover{color:#b68aff}
+.hero{
+ min-height:85vh;display:flex;align-items:center;
+ justify-content:space-between;padding:80px 10%;
+ gap:30px;
+}
+.tag{
+ color:#bd9cff;border:1px solid #9b6cff55;
+ border-radius:30px;padding:10px 17px;
+ display:inline-block;font-size:12px;
+}
+h1{font-size:clamp(48px,8vw,85px);line-height:1.05;margin:25px 0}
+.gradient{
+ background:linear-gradient(90deg,#a77aff,#ff9b54);
+ -webkit-background-clip:text;color:transparent;
+}
+.hero p{color:#aaa;line-height:1.8;max-width:500px}
+.buttons{display:flex;gap:15px;margin-top:30px;flex-wrap:wrap}
+.btn{
+ padding:14px 23px;border-radius:12px;
+ background:linear-gradient(110deg,#9761ed,#7446c7);
+ color:white;font-weight:bold;
+ box-shadow:0 0 30px #9b6cff35;
+}
+.btn:hover{transform:translateY(-4px);color:white}
+.secondary{background:#ffffff0c;border:1px solid #ffffff25}
+.avatar{
+ width:280px;height:280px;border-radius:40px;
+ display:grid;place-items:center;
+ font-size:110px;font-weight:bold;
+ background:linear-gradient(145deg,#30204e,#171326);
+ border:1px solid #a77aff66;
+ box-shadow:0 0 100px #8e55ff35;
+ animation:float 4s infinite ease-in-out;
+}
+@keyframes float{50%{transform:translateY(-18px) rotate(3deg)}}
+section{padding:90px 10%}
+.heading{font-size:40px;margin-bottom:35px}
+.heading span{color:#aa80ff}
+.about{
+ background:#ffffff08;border:1px solid #ffffff12;
+ border-radius:20px;padding:30px;line-height:1.9;color:#bbb;
+}
+.grid{
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+ gap:17px;
+}
+.card{
+ background:#ffffff08;border:1px solid #ffffff15;
+ padding:25px;border-radius:18px;transition:.3s;
+}
+.card:hover{
+ transform:translateY(-8px);
+ border-color:#a77aff;
+ background:#9b6cff12;
+}
+.card h3{margin:15px 0 10px}
+.card p{color:#aaa;font-size:13px;line-height:1.8}
+.icon{font-size:30px}
+.project{min-height:190px}
+.project small{color:#b68aff}
+.contact{text-align:center}
+.contact p{color:#aaa;margin:15px auto 30px;max-width:500px;line-height:1.8}
+footer{
+ border-top:1px solid #ffffff15;padding:30px;
+ text-align:center;color:#777;font-size:12px;
+}
+.reveal{
+ opacity:0;transform:translateY(35px);
+ transition:all .8s ease;
+}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:750px){
+ .hero{flex-direction:column;text-align:center;padding-top:70px}
+ .hero p{margin:auto}
+ .buttons{justify-content:center}
+ .avatar{width:190px;height:190px;font-size:75px}
+ .links{gap:12px;font-size:12px}
+ nav{padding:20px 5%}
+ section{padding:65px 6%}
+}
+@media(max-width:430px){
+ .links{gap:8px;font-size:10px}
+ .logo{font-size:17px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+ <div class="logo">PUMP<span>.</span>ST</div>
+ <div class="links">
+  <a href="#about">Обо мне</a>
+  <a href="#skills">Навыки</a>
+  <a href="#projects">Проекты</a>
+  <a href="#contact">Контакты</a>
+ </div>
+</nav>
+
+<header class="hero">
+ <div>
+  <span class="tag">✦ DEVELOPER PORTFOLIO</span>
+  <h1>Привет, я<br><span class="gradient">Pumpk1nST</span></h1>
+  <p>
+   Разработчик, энтузиаст технологий и создатель цифровых проектов.
+   Изучаю программирование, создаю сайты, ботов и игровые системы.
+  </p>
+  <div class="buttons">
+   <a class="btn" href="#projects">Мои проекты ↗</a>
+   <a class="btn secondary" href="#about">Обо мне</a>
+  </div>
+ </div>
+ <div class="avatar">P</div>
+</header>
+
+<section id="about" class="reveal">
+ <h2 class="heading">Обо <span>мне</span></h2>
+ <div class="about">
+  Меня зовут Pumpk1nST. Я занимаюсь разработкой собственных
+  проектов и постоянно изучаю новые технологии.
+  Мне нравится Python, веб-разработка, Minecraft,
+  Roblox Studio и автоматизация.
+  Моя цель — создавать интересные и полезные продукты,
+  превращая идеи в реальные проекты.
+ </div>
+</section>
+
+<section id="skills" class="reveal">
+ <h2 class="heading">Мои <span>навыки</span></h2>
+ <div class="grid">
+  <div class="card"><div class="icon">🐍</div><h3>Python</h3><p>Скрипты, боты, приложения и библиотеки.</p></div>
+  <div class="card"><div class="icon">🌐</div><h3>HTML / CSS / JS</h3><p>Создание сайтов, интерфейсов и анимаций.</p></div>
+  <div class="card"><div class="icon">⌨️</div><h3>PowerShell</h3><p>Windows-автоматизация и консольные инструменты.</p></div>
+  <div class="card"><div class="icon">🎮</div><h3>Roblox Studio</h3><p>Игровые механики и Lua-разработка.</p></div>
+  <div class="card"><div class="icon">🧱</div><h3>Minecraft</h3><p>Серверы, плагины и игровые системы.</p></div>
+  <div class="card"><div class="icon">🤖</div><h3>Automation</h3><p>Боты и автоматизация процессов.</p></div>
+ </div>
+</section>
+
+<section id="projects" class="reveal">
+ <h2 class="heading">Мои <span>проекты</span></h2>
+ <div class="grid">
+  <div class="card project">
+   <small>01 / MINECRAFT</small>
+   <h3>🎃 PUMPCraft</h3>
+   <p>Собственный Minecraft-сервер с плагинами, рангами и событиями.</p>
+  </div>
+  <div class="card project">
+   <small>02 / PYTHON</small>
+   <h3>🐍 PUMPTG</h3>
+   <p>Python-библиотека для создания Telegram-ботов.</p>
+  </div>
+  <div class="card project">
+   <small>03 / POWERSHELL</small>
+   <h3>📡 DATCHIK_INFO</h3>
+   <p>Инструмент получения информации об IP и доменах.</p>
+  </div>
+  <div class="card project">
+   <small>04 / WEB</small>
+   <h3>🎨 RBTheme</h3>
+   <p>Проект кастомизации интерфейса Roblox.</p>
+  </div>
+ </div>
+</section>
+
+<section id="contact" class="contact reveal">
+ <h2 class="heading">Связаться со <span>мной</span></h2>
+ <p>Следи за моими проектами и разработками на GitHub!</p>
+ <div class="buttons" style="justify-content:center">
+  <a class="btn" href="https://github.com/" target="_blank">GitHub ↗</a>
+  <a class="btn secondary" href="#top">Наверх ↑</a>
+ </div>
+</section>
+
+<footer>
+ © <span id="year"></span> Pumpk1nST · Built with code and creativity.
+</footer>
+
+<script>
+document.getElementById("year").textContent=new Date().getFullYear();
+
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{
+  if(entry.isIntersecting){
+   entry.target.classList.add("visible");
+   observer.unobserve(entry.target);
+  }
+ });
+},{threshold:.15});
+
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
